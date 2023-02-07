@@ -1,9 +1,9 @@
 import { Category } from './enums'
 
 export interface Moment {
-  id: number
   file: string
   ownership: string
+  description: string
   category: Category
 }
 

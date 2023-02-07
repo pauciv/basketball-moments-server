@@ -1,5 +1,5 @@
 import { Router } from 'express' // usamos ES Modules, pero se compila en commonjs
-import { createNewMoment, getAllMoments, getOneMoment } from '../../controllers/momentsController'
+import { createNewMoment, deleteOneMoment, getAllMoments, getOneMoment, updateOneMoment } from '../../controllers/momentsController'
 
 const router = Router()
 
@@ -7,6 +7,8 @@ router
   .get('/', getAllMoments)
   .get('/:momentId', getOneMoment)
   .post('/', createNewMoment)
+  .patch('/:momentId', updateOneMoment)
+  .delete('/:momentId', deleteOneMoment)
 
 // .get('/', getAllMoments)
 // .get('/:momentId', (req, res) => {
