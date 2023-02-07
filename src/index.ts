@@ -1,9 +1,10 @@
 import express from 'express'
 import cors from 'cors'
-import mongoose from 'mongoose'
 import momentsRouter from './v1/routes/momentsRoutes'
-import { PORT, DB /* , APP_ORIGIN */ } from './config/config'
 import dbConnect from './config/mongo'
+import 'dotenv/config'
+
+const PORT = process.env.PORT as string
 
 const app = express()
 app.use(cors())
@@ -15,8 +16,4 @@ dbConnect()
   .then(() => console.log('conexion ready'))
   .catch(err => console.log(err))
 
-// mongoose.connect(DB)
-//   .then(() => {
 app.listen(PORT, () => { console.log(`Server running on port http://localhost:${PORT}`) })
-//   })
-//   .catch(err => console.log(err))

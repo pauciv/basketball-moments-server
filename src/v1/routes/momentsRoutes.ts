@@ -1,5 +1,4 @@
 import { Router } from 'express' // usamos ES Modules, pero se compila en commonjs
-// import * as momentsController from '../../controllers/momentsController'
 import { createNewMoment, getAllMoments, getOneMoment } from '../../controllers/momentsController'
 
 const router = Router()

@@ -11,6 +11,7 @@ const getAllMoments = (_req: Request, res: Response): any => {
 
 const getOneMoment = (_req: Request, res: Response): any => {
   try {
+    return res.send({ data: 'one moment' })
   } catch (err) {
     handleHttp(res, 'getOneMoment error')
   }
