@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import momentsRouter from './v1/routes/momentsRoutes'
+import usersRouter from './v1/routes/usersRoutes'
 import dbConnect from './config/mongodb'
 import 'dotenv/config'
 
@@ -11,6 +12,7 @@ app.use(cors())
 app.use(express.json()) // transforma req.body en json
 
 app.use('/api/v1/moments', momentsRouter)
+app.use('/api/v1/users', usersRouter)
 
 dbConnect()
   .then(() => console.log('Connected to DB'))

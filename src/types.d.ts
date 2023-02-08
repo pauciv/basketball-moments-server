@@ -7,4 +7,12 @@ export interface Moment {
   category: Category
 }
 
-export type NewMoment = Omit<Moment, 'id'>
+export interface User {
+  username: string
+  email: string
+  firstName: string
+  lastName: string
+  avatar: string
+  uploads: array
+  liked: array
+}

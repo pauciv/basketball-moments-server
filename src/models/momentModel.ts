@@ -9,7 +9,6 @@ const momentSchema = new Schema<Moment>({
   },
   ownership: {
     type: String
-
   },
   description: {
     type: String
