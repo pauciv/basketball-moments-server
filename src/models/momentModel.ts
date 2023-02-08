@@ -1,4 +1,4 @@
-import { Schema, Types, model, Model } from 'mongoose'
+import { Schema, model } from 'mongoose'
 import { Category } from '../enums'
 import { Moment } from '../types'
 
@@ -24,6 +24,6 @@ const momentSchema = new Schema<Moment>({
   versionKey: false
 })
 
-const momentModel = model('moment', momentSchema)
+const MomentModel = model('moment', momentSchema)
 
-export default momentModel
+export default MomentModel

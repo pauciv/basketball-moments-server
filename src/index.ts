@@ -13,7 +13,7 @@ app.use(express.json()) // transforma req.body en json
 app.use('/api/v1/moments', momentsRouter)
 
 dbConnect()
-  .then(() => console.log('conexion ready'))
+  .then(() => console.log('Connected to DB'))
   .catch(err => console.log(err))
 
 app.listen(PORT, () => { console.log(`Server running on port http://localhost:${PORT}`) })

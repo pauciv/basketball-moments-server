@@ -20,6 +20,11 @@ commands
 - npm i multer -D -> upload files
 - npm i @types/multer -D
 
+- npm i jwks-rsa
+- npm i express-jwt
+- express-openid-connect
+
+expressvalidator???
 
 scripts
 - "tsc": "tsc" -> transform ts files to js
