@@ -1,10 +1,9 @@
 import { Response } from 'express'
 
-const handleHttp = (res: Response, error: string, errorRaw?: any): any => {
-  console.log(errorRaw)
+const handleError = (res: Response, error: string): any => {
   res
     .status(500)
     .send({ error })
 }
 
-export { handleHttp }
+export { handleError }
