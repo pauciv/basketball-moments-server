@@ -12,6 +12,10 @@ const getMoment = async (id: string): Promise<any> => {
 }
 
 const createMoment = async (moment: Moment): Promise<any> => {
+  const isAlreadyCreated = await MomentModel.findOne({ file: moment.file })
+  if (isAlreadyCreated != null) {
+    return
+  }
   const response = await MomentModel.create(moment)
   return response
 }

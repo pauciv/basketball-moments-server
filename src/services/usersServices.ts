@@ -12,6 +12,10 @@ const getUser = async (id: string): Promise<any> => {
 }
 
 const createUser = async (user: User): Promise<any> => {
+  const isAlreadyCreated = await UserModel.findOne({ email: user.email })
+  if (isAlreadyCreated != null) {
+    return
+  }
   const response = await UserModel.create(user)
   return response
 }

@@ -1,6 +1,5 @@
-import { Router } from 'express' // usamos ES Modules, pero se compila en commonjs
+import { Router } from 'express'
 import { createNewUser, deleteOneUser, getAllUsers, getOneUser, updateOneUser } from '../../controllers/usersController'
-import { checkJwt } from '../../middlewares/checkJwt'
 
 const router = Router()
 
